@@ -1,4 +1,4 @@
-import profiles from "../data/members.json";
+import members from "../data/members";
 import MemberCard from "../components/cards/MemberCard";
 
 function Home() {
@@ -10,7 +10,7 @@ function Home() {
             </div>
 
             <div className="members-grid">
-                {profiles.map((member) => (
+                {members.map((member) => (
                     <MemberCard
                         key={member.id}
                         member={member}
