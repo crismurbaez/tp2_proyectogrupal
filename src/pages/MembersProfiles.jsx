@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import members from "../data/members";
 
-function MemberProfile() {
+function MembersProfiles() {
   const { id } = useParams();
 
   const member = members.find(
@@ -37,4 +37,4 @@ function MemberProfile() {
   );
 }
 
-export default MemberProfile;
+export default MembersProfiles;
