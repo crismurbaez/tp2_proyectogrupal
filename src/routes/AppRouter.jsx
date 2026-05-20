@@ -3,6 +3,10 @@ import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home";
 import Bitacora from "../pages/Bitacora";
 import MemberProfile from "../pages/MemberProfile";
+import Explorer from "../pages/Explorer";
+import ApiPage from "../pages/ApiPage";
+import Galley from "../pages/Gallery";
+import RenderTree from "../pages/RenderTree";
 
 function AppRouter() {
   return (
@@ -11,11 +15,19 @@ function AppRouter() {
         /* Layout principal */
         <Route element={<MainLayout />}>
           {/* Home */}
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
+          {/* Perfil dinámico */}
+          <Route path="member/:id" element={<MemberProfile />} />
+          {/* Explorador */}
+          <Route path="explorer" element={<Explorer />} />
+          {/* API */}
+          <Route path="api" element={<ApiPage />} />
+          {/* Gallery */}
+          <Route path="gallery" element={<Galley />} />
+          {/* Render Tree */}
+          <Route path="render-tree" element={<RenderTree />} />
           {/* Bitácora */}
           <Route path="/bitacora" element={<Bitacora />} />
-          {/* Perfil dinámico */}
-          <Route path="/member/:id" element={<MemberProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>
