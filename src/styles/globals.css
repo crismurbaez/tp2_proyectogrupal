@@ -447,3 +447,113 @@ a {
 
   color: #d1d5db;
 }
+
+/* =======================================================
+   API PAGE
+======================================================= */
+
+.api-header {
+  margin-bottom: 2rem;
+}
+
+.api-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.api-header p {
+  color: #9ca3af;
+}
+
+/* =======================================================
+   API GRID
+======================================================= */
+
+.api-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 1.5rem;
+}
+
+/* =======================================================
+   API CARD
+======================================================= */
+
+.api-card {
+  background: #1f2937;
+
+  border: 1px solid #374151;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.api-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #60a5fa;
+}
+
+.api-card img {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: cover;
+}
+
+.api-card h3 {
+  padding: 1rem 1rem 0.5rem;
+}
+
+.api-card p {
+  padding: 0 1rem 1rem;
+
+  color: #d1d5db;
+}
+
+/* =======================================================
+   PAGINATION
+======================================================= */
+
+.pagination {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.pagination button {
+  background: #374151;
+
+  border: none;
+
+  color: white;
+
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.pagination button:hover {
+  background: #60a5fa;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}

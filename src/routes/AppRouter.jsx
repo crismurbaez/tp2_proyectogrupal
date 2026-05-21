@@ -4,7 +4,7 @@ import Home from "../pages/Home";
 import Bitacora from "../pages/Bitacora";
 import MembersProfiles from "../pages/MembersProfiles";
 import Explorer from "../pages/Explorer";
-import ApiPage from "../pages/ApiPage";
+import ApiExplorer from "../pages/ApiExplorer";
 import RenderTree from "../pages/RenderTree";
 
 function AppRouter() {
@@ -22,7 +22,7 @@ function AppRouter() {
           {/* Explorador JSON*/}
           <Route path="explorer" element={<Explorer />} />
           {/* Explorador API */}
-          <Route path="api" element={<ApiPage />} />
+          <Route path="api" element={<ApiExplorer />} />
           {/* Render Tree */}
           <Route path="render-tree" element={<RenderTree />} />
         </Route>
