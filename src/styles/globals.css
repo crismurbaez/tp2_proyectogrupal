@@ -586,3 +586,129 @@ a {
 .api-controls input:focus {
   border-color: #60a5fa;
 }
+
+/* =======================================================
+   RENDER TREE PAGE
+======================================================= */
+
+.tree-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-header {
+  margin-bottom: 3rem;
+}
+
+.tree-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tree-header p {
+  color: #9ca3af;
+}
+
+/* =======================================================
+   TREE CONTAINER
+======================================================= */
+
+.tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* =======================================================
+   TREE LEVEL
+======================================================= */
+
+.tree-level {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+
+  flex-wrap: wrap;
+}
+
+/* =======================================================
+   TREE BRANCH
+======================================================= */
+
+.tree-branch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* =======================================================
+   TREE CHILDREN
+======================================================= */
+
+.tree-children {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+/* =======================================================
+   TREE NODE
+======================================================= */
+
+.tree-node {
+  background: #1f2937;
+
+  border: 1px solid #374151;
+
+  border-radius: 16px;
+
+  padding: 1rem 2rem;
+
+  min-width: 180px;
+
+  text-align: center;
+
+  transition: 0.3s ease;
+
+  font-weight: bold;
+}
+
+.tree-node:hover {
+  transform: translateY(-5px);
+
+  border-color: #60a5fa;
+}
+
+/* Root Node */
+
+.tree-node.root {
+  background: #2563eb;
+}
+
+/* Child Nodes */
+
+.tree-node.child {
+  min-width: 160px;
+
+  font-size: 0.95rem;
+}
+
+/* =======================================================
+   TREE LINES
+======================================================= */
+
+.tree-line.vertical {
+  width: 2px;
+  height: 40px;
+
+  background: #374151;
+}
+
+.tree-line.vertical.small {
+  height: 20px;
+}
