@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaHouse,FaBook,FaUserGroup,FaDatabase,FaCloud,FaCodeBranch,FaChevronDown,FaChevronUp } from "react-icons/fa6";
+import { FaHouse,FaBook,FaUserGroup,FaDatabase,FaCloud,FaCodeBranch,FaChevronDown,FaChevronUp} from "react-icons/fa6";
+
 import members from "../../data/members";
 
-function Sidebar() {
+function Sidebar({ sidebarOpen }) {
 
     const [openMembers, setOpenMembers] = useState(false);
 
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
 
             <div className="sidebar-header">
                 <h2>Hawkins Devs</h2>
