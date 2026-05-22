@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaHouse,FaBook,FaUserGroup,FaDatabase,FaCloud,FaCodeBranch,FaChevronDown,FaChevronUp} from "react-icons/fa6";
+import { FaHouse, FaBook, FaUserGroup, FaImages, FaDatabase, FaCloud, FaCodeBranch, FaChevronDown, FaChevronUp } from "react-icons/fa6";
 
 import members from "../../data/members";
 
@@ -66,6 +66,14 @@ function Sidebar({ sidebarOpen }) {
                     )}
 
                 </div>
+
+                <Link 
+                to="/gallery"
+                className="nav-link"
+                >
+                    <FaImages />
+                    <span>Galería</span>
+                </Link>
 
                 <Link
                     to="/explorer"
