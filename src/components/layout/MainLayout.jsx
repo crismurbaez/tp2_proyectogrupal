@@ -22,7 +22,7 @@ function MainLayout() {
             </button>
             
             {/* SIDEBAR */}
-            <Sidebar />
+            <Sidebar sidebarOpen={sidebarOpen}/>
 
             <main className="main-content">
                 <Outlet />

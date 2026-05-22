@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import members from "../data/members";
 
 function MembersProfiles() {
@@ -8,6 +8,18 @@ function MembersProfiles() {
     (m) => m.id === id
   );
 
+  if (!member) {
+  return (
+    <section className="error-page">
+      <h2>Integrante no encontrado</h2>
+      <p>El perfil que estás buscando no existe.</p>
+
+      <Link to="/">
+        Volver al inicio
+      </Link>
+    </section>
+  );
+  }
   return (
     <section className="profile-page">
       <header className="profile-header">

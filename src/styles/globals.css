@@ -192,6 +192,15 @@ a {
 /* =======================================================
    MEMBERS GRID
 ======================================================= */
+.error-page {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
 
 .members-grid {
   display: grid;
