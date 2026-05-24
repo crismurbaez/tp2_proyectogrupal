@@ -1,0 +1,96 @@
+/* =========================
+   HAWKINS THEME (DEFAULT)
+========================= */
+
+:root {
+  --color-bg-body: #111827;
+  --color-bg-card: #1f2937;
+  --color-border: #374151;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #9ca3af;
+  --color-text-muted: #d1d5db;
+
+  --color-accent: #60a5fa;
+  --color-accent-solid: #2563eb;
+
+  --color-overlay: rgba(0, 0, 0, 0.9);
+  --shadow-glow:
+    0 0 20px rgba(96, 165, 250, 0.25);
+
+  --gradient-bg:
+    linear-gradient(
+      135deg,
+      #1e293b 0%,
+      #111827 100%
+    );
+  
+  --bg-image: url('/img/hawkins.png');
+}
+
+/* =========================
+   UPSIDE DOWN THEME
+========================= */
+
+[data-theme="upside-down"] {
+  --color-bg-body: #050505;
+
+  --color-bg-card: #140909;
+
+  --color-border: #3a1010;
+
+  --color-text-primary: #f3f4f6;
+
+  --color-text-secondary: #b91c1c;
+
+  --color-text-muted: #d1d5db;
+
+  --color-accent: #ef4444;
+
+  --color-accent-solid: #b91c1c;
+
+  --color-overlay: rgba(0, 0, 0, 0.95);
+
+  --shadow-glow:
+    0 0 25px rgba(239, 68, 68, 0.35);
+
+  --gradient-bg:
+    linear-gradient(
+      135deg,
+      #1a0000 0%,
+      #050505 100%
+    );
+
+  --bg-image: url('/img/upside-down.png');
+}
+
+/* HAWKINS */
+[data-theme="hawkins"] .profile-page {
+    color: #111;
+}
+
+[data-theme="hawkins"] .profile-skill {
+    background: rgba(79, 70, 229, 0.15);
+}
+
+[data-theme="hawkins"] .profile-quote {
+    border-color: #4f46e5;
+}
+
+/* UPSIDE DOWN */
+[data-theme="upside-down"] .profile-page {
+    background: #0f172a;
+    color: #fff;
+}
+
+[data-theme="upside-down"] .skill {
+    background: rgba(255, 0, 0, 0.15);
+}
+
+[data-theme="upside-down"] .profile-quote {
+    border-color: red;
+}
+
+[data-theme="upside-down"] .back-link {
+    color: #ff4d4d;
+}

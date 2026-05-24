@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaHouse, FaBook, FaUserGroup, FaImages, FaDatabase, FaCloud, FaCodeBranch, FaChevronDown, FaChevronUp } from "react-icons/fa6";
-
 import members from "../../data/members";
+import ThemeToggle from "../ui/ThemeToggle";
+import { useTheme } from "../../themes/ThemeContext";
 
 function Sidebar({ sidebarOpen }) {
 
     const [openMembers, setOpenMembers] = useState(false);
+    const { theme } = useTheme();
 
     return (
         <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
 
             <div className="sidebar-header">
-                <h2>Hawkins Devs</h2>
+                <img src={theme === "upside-down" ? "/img/logo_devs_dark.png" : "/img/logo_devs_light.png"} alt="LogoDevs" className="sidebar-logo" />
+                <h2> {theme === "upside-down" ? "Upside Down" : "Hawkins"} </h2>
             </div>
 
             <nav className="sidebar-nav">
@@ -100,6 +103,10 @@ function Sidebar({ sidebarOpen }) {
                 </Link>
 
             </nav>
+
+            <div className="sidebar-footer">
+                <ThemeToggle />
+            </div>
 
         </aside>
     );

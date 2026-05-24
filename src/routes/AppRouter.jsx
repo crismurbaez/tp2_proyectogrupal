@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home";
 import Bitacora from "../pages/Bitacora";
@@ -10,7 +10,6 @@ import RenderTree from "../pages/RenderTree";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
       <Routes>
         /* Layout principal */
         <Route element={<MainLayout />}>
@@ -30,7 +29,6 @@ function AppRouter() {
           <Route path="render-tree" element={<RenderTree />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 }
 

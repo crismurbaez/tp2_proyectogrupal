@@ -5,7 +5,7 @@ function Home() {
     return (
         <section className="dashboard">
             <div className="dashboard-header">
-                <h1>Hawkins Dev</h1>
+                <h1>Hawkins Devs</h1>
                 <p>Proyecto React migrado desde TP1</p>
             </div>
 

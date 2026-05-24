@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
-
 import { FaArrowRight } from "react-icons/fa6";
+import { useTheme } from "../../themes/ThemeContext";
 
 function MemberCard({ member }) {
+
+  const { theme } = useTheme();
+
+  const avatar = theme === "upside-down" ? member.avatarDark : member.avatarLight;
+  
   return (
     <article className="member-card">
 
       <div className="member-avatar">
-        <img
-          src={member.avatar}
-          alt={member.name}
-        />
+        <img src={avatar} alt={member.name} />
       </div>
 
       <div className="member-info">
-
         <h2>{member.name}</h2>
-
-        <p>{member.role}</p>
+        <p className="member-role">
+          {member.role}
+          </p>
 
         <div className="member-skills">
           {member.skills.map((skill) => (
@@ -26,7 +28,6 @@ function MemberCard({ member }) {
             </span>
           ))}
         </div>
-
       </div>
 
       <Link
