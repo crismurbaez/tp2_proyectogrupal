@@ -10,6 +10,7 @@ function MembersProfiles() {
   const member = members.find(
     (m) => m.id === id
   );
+  const profile = member?.profiles[theme];
 
   if (!member) {
   return (
@@ -27,22 +28,22 @@ function MembersProfiles() {
   return (
     <section className={`profile-page ${theme}`}>
       <header className="profile-header">
-      <h1>{member.name}</h1>
+      <h1>{profile.name}</h1>
 
-      <p className="profile-role">{member.role}</p>
+      <p className="profile-role">{profile.role}</p>
       </header>
 
       <section className="profile-section">
         <h2>Sobre mí</h2>
-        <p>{member.desc}</p>
+        <p>{profile.desc}</p>
       </section>
 
       <section className="profile-section">
         <h2>Habilidades</h2>
 
         <div className="skills-container">
-          {member.skills.map((skill, index) => (
-            <span key={index}>
+          {profile.skills.map((skill) => (
+            <span key={skill}>
               {skill}
             </span>
           ))}
@@ -51,7 +52,7 @@ function MembersProfiles() {
 
       <section className="profile-section profile-quote">
           <h2>Frase favorita</h2>
-          <p>{member.quote}</p>
+          <p>{profile.quote}</p>
        </section>
 
        <div className="profile-footer">

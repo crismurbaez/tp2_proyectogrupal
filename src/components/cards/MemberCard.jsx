@@ -6,28 +6,42 @@ function MemberCard({ member }) {
 
   const { theme } = useTheme();
 
-  const avatar = theme === "upside-down" ? member.avatarDark : member.avatarLight;
-  
+  const profile =
+    member.profiles[theme];
+
   return (
+
     <article className="member-card">
 
       <div className="member-avatar">
-        <img src={avatar} alt={member.name} />
+
+        <img
+          src={profile.img}
+          alt={member.name}
+        />
+
       </div>
 
       <div className="member-info">
+
         <h2>{member.name}</h2>
+
         <p className="member-role">
-          {member.role}
-          </p>
+          {profile.role}
+        </p>
 
         <div className="member-skills">
-          {member.skills.map((skill) => (
+
+          {profile.skills.map((skill) => (
+
             <span key={skill}>
               {skill}
             </span>
+
           ))}
+
         </div>
+
       </div>
 
       <Link

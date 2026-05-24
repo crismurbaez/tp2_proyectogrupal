@@ -19,20 +19,50 @@ function Explorer() {
         <p>Descubre nuevas series, películas y videojuegos.</p>
       </div>
       <div className="explorer-controls">
-      <input type="text" placeholder="Buscar..." value={search} onChange={(e) => setSearch(e.target.value)} />
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
-        <option value="Todos">Todos</option>
-        <option value="Serie">Serie</option>
-        <option value="Película">Película</option>
-      </select>
+        <input type="text" placeholder="Buscar..." value={search} onChange={(e) => setSearch(e.target.value)} />
+        <select value={category} onChange={(e) => setCategory(e.target.value)}>
+          <option value="Todos">Todos</option>
+          <option value="Serie">Serie</option>
+          <option value="Película">Película</option>
+        </select>
       </div>
       <div className="explorer-grid">
         {filteredData.map((item) => (
-          <div key={item.id} className="explorer-card">
-            <h3>{item.title}</h3>
-            <p>{item.category}</p>
-            <p>{item.year}</p>
-            <p>{item.description}</p>
+          <div
+            key={item.id}
+            className="explorer-card"
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="explorer-image"
+            />
+
+            <div className="explorer-content">
+
+              <div className="explorer-top">
+
+                <h3>{item.title}</h3>
+
+                <span className="explorer-category">
+                  {item.category}
+                </span>
+
+              </div>
+
+              <p className="explorer-description">
+                {item.description}
+              </p>
+
+              <div className="explorer-footer">
+                <span>{item.year}</span>
+                <span className="explorer-status">
+                  {item.status}
+                </span>
+
+              </div>
+
+            </div>
           </div>
         ))}
       </div>
