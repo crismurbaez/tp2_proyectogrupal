@@ -1,0 +1,211 @@
+/* Perfil */
+.profile {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.profile::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border: 1px solid #FF0000;
+    opacity: 0.3;
+    filter: blur(6px);
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
+    z-index: 0;
+}
+
+.profile-card {
+    position: relative;
+    z-index: 1;
+    align-items: flex-start;
+    display: flex;
+    gap: 30px;
+
+    padding: 40px;
+    border-radius: 20px;
+
+    width: 900px;
+    max-width: 95%;
+
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 0, 0, 0.3);
+
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.3),
+        0 0 60px rgba(255, 0, 0, 0.2);
+
+    color: #fff;
+}
+
+#profile-name {
+    font-family: 'StrangerThings', serif;
+    color: #ff2a2a;
+    text-shadow: 0 0 10px #FF0000;
+    letter-spacing: 2px;
+}
+
+.profile-info {
+    max-width: 450px;
+}
+
+.quote {
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile-left img {
+    width: 260px;
+    margin-top: -20px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.profile-left .quote {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    max-width: 240px;
+    color: #ccc;
+    border-top: 1px solid rgba(255, 0, 0, 0.3);
+    padding-top: 10px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-data {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.profile-block {
+    border-left: 3px solid #FF0000;
+    padding-left: 15px;
+}
+
+.profile-block h3 {
+    color: #ff2a2a;
+    margin-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.profile-block p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.profile-left img:hover {
+    filter: grayscale(100%) contrast(150%) brightness(0.6);
+    transform: scale(1.05);
+}
+
+.profile-card {
+    animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.97;
+    }
+
+    52% {
+        opacity: 0.9;
+    }
+
+    54% {
+        opacity: 1;
+    }
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Fondos */
+
+body.max.light .profile {
+    background: url('../img/background_max_profile_light.png') center/cover no-repeat;
+}
+
+body.max.dark .profile {
+    background: url('../img/background_maax_profile_dark.jpg') center/cover no-repeat;
+}
+
+body.nancy.light .profile {
+    background: url('../img/background_nancy_profile_light.jpg') center/cover no-repeat;
+}
+
+body.nancy.dark .profile {
+    background: url('../img/background_nancy_profile_dark.webp') center/cover no-repeat;
+}
+
+body.steve.light .profile {
+    background: url('../img/background_stevee_profile_light.jpg') center/cover no-repeat;
+}
+
+body.steve.dark .profile {
+    background: url('../img/background_stevee_profile_dark.jpg') center/cover no-repeat;
+}
+
+body.robin.light .profile {
+    background: url('../img/background_robin_profile_light.jpg') center/cover no-repeat;
+}
+
+body.robin.dark .profile {
+    background: url('../img/background_robin_profile_dark.jpg') center/cover no-repeat;
+}
+
+.surprise-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.surprise-container img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.btn-surprice {
+    background: transparent;
+    border: 1px solid #FF0000;
+    color: #FF0000;
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-surprice:hover {
+    background: #FF0000;
+    color: #000000;
+    box-shadow: 0 0 10px #FF0000;
+}

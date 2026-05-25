@@ -1,67 +1,184 @@
+import React, { useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import members from "../data/members";
 import { useTheme } from "../themes/ThemeContext";
 
-function MembersProfiles() {
 
+function MembersProfiles() {
   const { id } = useParams();
   const { theme } = useTheme();
+  //Sorpresa animacion
+  const [showSurprise, setShowSurprise] = useState(false);
+  const [animPhase, setAnimPhase] = useState("IDLE");
+  const [targetRect, setTargetRect] = useState(null);
 
-  const member = members.find(
-    (m) => m.id === id
-  );
-  const profile = member?.profiles[theme];
+  const profileInfoRef = useRef(null);
+
+  const member = members.find((m) => m.id === id);
+  const profile = member.profiles[theme] || member.profiles["hawkins"];
 
   if (!member) {
-  return (
-    <section className="error-page">
-      <h2>Integrante no encontrado</h2>
-      <p>El perfil que estás buscando no existe.</p>
-
-      <Link to="/">
-        Volver al inicio
-      </Link>
-    </section>
-  );
+    return (
+      <section className="error-page">
+        <h2>Integrante no encontrado</h2>
+        <p>El perfil que estás buscando no existe.</p>
+        <Link to="/">Volver al inicio</Link>
+      </section>
+    );
   }
 
+
+  const handleSurpriseClick = () => {
+    if (!showSurprise) {
+      if (profileInfoRef.current) {
+        setTargetRect(profileInfoRef.current.getBoundingClientRect());
+      }
+
+      setShowSurprise(true);
+      setAnimPhase("SCARE");
+      document.body.style.overflow = "hidden";
+
+      setTimeout(() => {
+        setAnimPhase("SHRINK");
+      }, 800);
+
+      setTimeout(() => {
+        setAnimPhase("IDLE");
+        document.body.style.overflow = "";
+      }, 1600);
+    } else {
+      setShowSurprise(false);
+      setAnimPhase("IDLE");
+    }
+  };
+
   return (
-    <section className={`profile-page ${theme}`}>
-      <header className="profile-header">
-      <h1>{profile.name}</h1>
+    <main className="profile">
+      <div className="profile-card" id="profile-card-id">
+        <div className="profile-left">
+          <img
+            id="profile-img"
+            data-profile={member.id}
+            src={profile.img}
+            alt={`${member.name} profile`}
+          />
+          <p id="profile-quote" className="quote">
+            {profile.quote}
+          </p>
 
-      <p className="profile-role">{profile.role}</p>
-      </header>
-
-      <section className="profile-section">
-        <h2>Sobre mí</h2>
-        <p>{profile.desc}</p>
-      </section>
-
-      <section className="profile-section">
-        <h2>Habilidades</h2>
-
-        <div className="skills-container">
-          {profile.skills.map((skill) => (
-            <span key={skill}>
-              {skill}
-            </span>
-          ))}
+          <button
+            id="surprise-btn-id"
+            className="btn-surprice"
+            onClick={() => setShowSurprise(!showSurprise)}
+          >
+            {showSurprise ? "Ocultar Sorpresa" : "¡Sorpresa!"}
+          </button>
         </div>
-      </section>
 
-      <section className="profile-section profile-quote">
-          <h2>Frase favorita</h2>
-          <p>{profile.quote}</p>
-       </section>
+        {showSurprise ? (
+          <div 
+            className="surprise-container" 
+            id="surprise-wrapper"
+            ref={profileInfoRef}
+            style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '400px' }}
+          >
+            <img 
+              src={member.surprise} 
+              alt="surprise" 
+              style={{ opacity: animPhase === 'IDLE' ? 1 : 0, maxWidth: '100%', maxHeight: '400px' }} 
+            />
+          </div>
+        ) : (
+          <div className="profile-info" ref={profileInfoRef}>
+            <h2 id="profile-name">{member.name}</h2>
 
-       <div className="profile-footer">
-        <Link to="/" className="back-link">
-          ← Volver al inicio
-        </Link>
-       </div>
-      
-    </section>
+            <div className="profile-data">
+              <p><strong>Ubicación:</strong> {member.location}</p>
+              <p><strong>Edad:</strong> {member.age} años</p>
+              <p id="profile-role"><strong>Rol:</strong> {profile.role}</p>
+            </div>
+
+          <div className="profile-block">
+            <h3>Perfil</h3>
+            <p id="profile-desc">{profile.desc}</p>
+          </div>
+
+          <div className="profile-block">
+            <h3>Habilidades</h3>
+            <div id="profile-skills">
+              <ul style={{ margin: 0 }}>
+                {profile.skills.map((skill, index) => (
+                  <li key={index}>{skill}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="profile-block">
+            <h3>Música Favorita</h3>
+            <ul style={{ margin: 0 }}>
+              {member.favoriteMusic?.map((band, index) => (
+                <li key={index}>{band}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="profile-block">
+            <h3>Película Favorita</h3>
+            <ul style={{ margin: 0 }}>
+              {member.favoriteMovies?.map((movie, index) => (
+                <li key={index}>{movie}</li>
+              ))}
+            </ul>
+          </div>
+          </div>
+
+        )}
+        </div>
+
+
+      {/* Sorpresa animacion */}
+      {animPhase !== "IDLE" && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            zIndex: 999999,
+            backgroundColor:
+              animPhase === "SCARE" ? "rgba(0,0,0,0.95)" : "transparent",
+            transition: "background-color 0.8s ease",
+            pointerEvents: "none",
+          }}
+        >
+          <img
+            src={member.surprise}
+            alt="Flying surprise"
+            style={{
+              position: "absolute",
+              objectFit: "contain",
+              ...(animPhase === "SCARE"
+                ? {
+                    top: 0,
+                    left: 0,
+                    width: "100vw",
+                    height: "100vh",
+                    transition: "none",
+                  }
+                : {
+                    top: targetRect?.top,
+                    left: targetRect?.left,
+                    width: targetRect?.width,
+                    height: targetRect?.height,
+                    transition: "all 0.8s cubic-bezier(0.25, 1, 0.5, 1)",
+                  }),
+            }}
+          />
+        </div>
+      )}
+    </main>
   );
 }
 

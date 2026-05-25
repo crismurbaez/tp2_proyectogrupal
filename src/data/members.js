@@ -43,6 +43,21 @@ const members = [
       }
     },
 
+    favoriteMusic: [
+      "Megadeth",
+      "Queen",
+      "The Beattles",
+      "Michael Jackson"
+    ],
+    favoriteMovies: [
+      "The Matrix",
+      "Interstellar",
+      "Back to the Future",
+      "The Lord of the Rings"
+    ],
+    age: 18,
+    location: "Silent Hill",
+
     surprise:
       "/img/mind-flayer-stranger-things.gif"
   },
@@ -50,6 +65,8 @@ const members = [
   {
     id: "max",
     name: "Gisse",
+    age: 15,
+    location: " Lanoth",
 
     profiles: {
       hawkins: {
@@ -90,6 +107,18 @@ const members = [
         ]
       }
     },
+    favoriteMusic: [
+      "Kate Bush",
+      "Sabrina Carpenter",
+      "Queen",
+      "The Beattles"
+    ],
+    favoriteMovies: [
+      "El Hobbit",
+      "F1 Movie",
+      "Star Wars",
+      "Harry Potter"
+    ],
 
     surprise:
       "/img/vecna-stranger-things.gif"
@@ -138,6 +167,21 @@ const members = [
         ]
       }
     },
+    age: 25,
+    location: "Gotham City",
+
+  favoriteMusic: [
+    "Keane",
+    "Adele",
+    "N´SYNC",
+    "Los piojos"
+  ],
+  favoriteMovies: [
+    "Batman begins",
+    "Your name",
+    "Terminator 2",
+    "El origen"
+  ],
 
     surprise:
       "/img/stranger-things-demogorgon.gif"
@@ -186,6 +230,20 @@ const members = [
         ]
       }
     },
+    favoriteMusic: [
+      "The Beatles",
+      "Deep Purple",
+      "The Rolling Stones",
+      "Aerosmith"
+    ],
+    favoriteMovies: [
+      "El Señor de los Anillos",
+      "Star Wars",
+      "Harry Potter",
+      "F1 Movie"
+    ],
+    age: 18,
+    location: "La Montaña Solitaria (Lonely Mountain)",
 
     surprise:
       "/img/giphy.gif"
