@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'StrangerThings';
+  src: url('../font/Bolton.ttf') format('truetype');
+}
+
 /* =======================================================
    BODY
 ======================================================= */
@@ -34,6 +39,13 @@ a {
 
 li {
   list-style: none;
+}
+
+.title {
+  font-family: 'StrangerThings', serif;
+  font-size: 50px;
+  margin: 50px;
+  letter-spacing: 3px;
 }
 
 /* =======================================================
