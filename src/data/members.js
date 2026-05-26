@@ -57,6 +57,23 @@ const members = [
     ],
     age: 18,
     location: "Silent Hill",
+    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
+    techStack: [
+      { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
+      { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
+      { name: "CSS", level: 75, img: "/img/techIcons/css-3-logo.png" },
+      { name: "HTML", level: 80, img: "/img/techIcons/html5-logo.png" },
+      { name: "React", level: 85, img: "/img/techIcons/react-logo.png" },
+    ],
+    projects: [
+      { title: "Clinica SePrice", img: "/img/projects/lorena/clinica.png" },
+      { title: "Club deportivo Mobile", img: "/img/projects/lorena/club-deportivo-c-sharp.png" },
+      { title: "Club deportivo", img: "/img/projects/lorena/club-deportivo.png" }
+    ],
+    socialMedia: [
+      { platform: "GitHub", url: "https://github.com/", icon: "github" },
+      { platform: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" }
+    ],
 
     surprise:
       "/img/mind-flayer-stranger-things.gif"
@@ -119,6 +136,23 @@ const members = [
       "Star Wars",
       "Harry Potter"
     ],
+    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
+    techStack: [
+      { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
+      { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
+      { name: "CSS", level: 75, img: "/img/techIcons/css-3-logo.png" },
+      { name: "HTML", level: 80, img: "/img/techIcons/html5-logo.png" },
+      { name: "React", level: 85, img: "/img/techIcons/react-logo.png" },
+    ],
+    projects: [
+      { title: "Clinica SePrice", img: "/img/projects/lorena/clinica.png" },
+      { title: "Club deportivo Mobile", img: "/img/projects/lorena/club-deportivo-c-sharp.png" },
+      { title: "Club deportivo", img: "/img/projects/lorena/club-deportivo.png" }
+    ],
+    socialMedia: [
+      { platform: "GitHub", url: "https://github.com/", icon: "github" },
+      { platform: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" }
+    ],
 
     surprise:
       "/img/vecna-stranger-things.gif"
@@ -169,6 +203,22 @@ const members = [
     },
     age: 25,
     location: "Gotham City",
+    techStack: [
+      { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
+      { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
+      { name: "CSS", level: 75, img: "/img/techIcons/css-3-logo.png" },
+      { name: "HTML", level: 80, img: "/img/techIcons/html5-logo.png" },
+      { name: "React", level: 85, img: "/img/techIcons/react-logo.png" },
+    ],
+    projects: [
+      { title: "Clinica SePrice", img: "/img/projects/lorena/clinica.png" },
+      { title: "Club deportivo Mobile", img: "/img/projects/lorena/club-deportivo-c-sharp.png" },
+      { title: "Club deportivo", img: "/img/projects/lorena/club-deportivo.png" }
+    ],
+    socialMedia: [
+      { platform: "GitHub", url: "https://github.com/", icon: "github" },
+      { platform: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" }
+    ],
 
   favoriteMusic: [
     "Keane",
@@ -244,7 +294,23 @@ const members = [
     ],
     age: 18,
     location: "La Montaña Solitaria (Lonely Mountain)",
-
+    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
+    techStack: [
+      { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
+      { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
+      { name: "CSS", level: 75, img: "/img/techIcons/css-3-logo.png" },
+      { name: "HTML", level: 80, img: "/img/techIcons/html5-logo.png" },
+      { name: "React", level: 85, img: "/img/techIcons/react-logo.png" },
+    ],
+    projects: [
+      { title: "Clinica SePrice", img: "/img/projects/lorena/clinica.png" },
+      { title: "Club deportivo Mobile", img: "/img/projects/lorena/club-deportivo-c-sharp.png" },
+      { title: "Club deportivo", img: "/img/projects/lorena/club-deportivo.png" }
+    ],
+    socialMedia: [
+      { platform: "GitHub", url: "https://github.com/", icon: "github" },
+      { platform: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" }
+    ],
     surprise:
       "/img/giphy.gif"
   }
