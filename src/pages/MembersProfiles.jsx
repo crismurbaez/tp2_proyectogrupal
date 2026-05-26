@@ -2,22 +2,24 @@ import React, { useState, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import members from "../data/members";
 import { useTheme } from "../themes/ThemeContext";
-
+import ProjectsCarousel from "../components/profile/ProjectsCarousel";
+import TechStack from "../components/profile/TechStack";
+import ProfileList from "../components/profile/ProfileList";
+import SocialMedia from "../components/profile/SocialMedia";
+import SurpriseAnimation from "../components/profile/SurpriseAnimation";
 
 function MembersProfiles() {
   const { id } = useParams();
   const { theme } = useTheme();
-  //Sorpresa animacion
+  const profileInfoRef = useRef(null);
+
+  {/* Sorpresa */}
   const [showSurprise, setShowSurprise] = useState(false);
   const [animPhase, setAnimPhase] = useState("IDLE");
   const [targetRect, setTargetRect] = useState(null);
-  // Carrusel
-  const [currentProject, setCurrentProject] = useState(0);
-
-  const profileInfoRef = useRef(null);
 
   const member = members.find((m) => m.id === id);
-  const profile = member.profiles[theme] || member.profiles["hawkins"];
+  const profile = member?.profiles[theme] || member?.profiles["hawkins"];
 
   if (!member) {
     return (
@@ -53,15 +55,6 @@ function MembersProfiles() {
     }
   };
 
-  //Carrusel
-  const nextProject = () => {
-    setCurrentProject((prev) => (prev + 1) % member.projects.length);
-  };
-  const prevProject = () => {
-    setCurrentProject(
-      (prev) => (prev - 1 + member.projects.length) % member.projects.length,
-    );
-  };
   return (
     <main className="profile">
       <div className="profile-card" id="profile-card-id">
@@ -84,22 +77,7 @@ function MembersProfiles() {
             {showSurprise ? "Ocultar Sorpresa" : "¡Sorpresa!"}
           </button>
 
-          {/* Redes */}
-          {!showSurprise && member.socialMedia && (
-            <div className="social-media-container">
-              {member.socialMedia.map((social, idx) => (
-                <a
-                  key={idx}
-                  href={social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="social-btn"
-                >
-                  {social.platform}
-                </a>
-              ))}
-            </div>
-          )}
+          {!showSurprise && <SocialMedia socialMedia={member.socialMedia} />}
         </div>
 
         {showSurprise ? (
@@ -146,127 +124,28 @@ function MembersProfiles() {
               <p id="profile-desc">{profile.desc}</p>
             </div>
 
-            <div className="profile-block">
-              <h3>Habilidades</h3>
-              <ul style={{ margin: 0 }}>
-                {profile.skills.map((skill, index) => (
-                  <li key={index}>{skill}</li>
-                ))}
-              </ul>
-            </div>
-
+            <ProfileList title="Habilidades" items={profile.skills} />
             {/* Tecnologias con progreso e iconos */}
-            <div className="profile-block">
-              <h3>Tech Stack</h3>
-              <div className="tech-stack-container">
-                {member.techStack.map((tech, index) => (
-                  <div key={index} className="tech-item">
-                    <img
-                      src={tech.img}
-                      alt={tech.name}
-                      className="tech-icon"
-                      onError={(e) => {
-                        e.target.src = profile.img;
-                      }}
-                    />
-                    <div className="tech-details">
-                      <span className="tech-name">{tech.name}</span>
-                      <div className="progress-bar-bg">
-                        <div
-                          className="progress-bar-fill"
-                          style={{ width: `${tech.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* CARRUSEL DE PROYECTOS */}
-            {member.projects && member.projects.length > 0 && (
-              <div className="profile-block">
-                <h3>Proyectos</h3>
-                <div className="carousel-container">
-                  <button className="carousel-btn prev" onClick={prevProject}>
-                    &#10094;
-                  </button>
-                  <div className="carousel-slide">
-                    <img
-                      src={member.projects[currentProject].img}
-                      alt={member.projects[currentProject].title}
-                    />
-                    <h4>{member.projects[currentProject].title}</h4>
-                  </div>
-                  <button className="carousel-btn next" onClick={nextProject}>
-                    &#10095;
-                  </button>
-                </div>
-              </div>
-            )}
-
-            <div className="profile-block">
-              <h3>Música Favorita</h3>
-              <ul style={{ margin: 0 }}>
-                {member.favoriteMusic?.map((band, index) => (
-                  <li key={index}>{band}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="profile-block">
-              <h3>Película Favorita</h3>
-              <ul style={{ margin: 0 }}>
-                {member.favoriteMovies?.map((movie, index) => (
-                  <li key={index}>{movie}</li>
-                ))}
-              </ul>
-            </div>
+            <TechStack techStack={member.techStack} defaultImg={profile.img} />
+            {/* Carrusel */}
+            <ProjectsCarousel projects={member.projects} />
+            {/* musica */}
+            <ProfileList title="Música Favorita" items={member.favoriteMusic} />
+            {/* peliculas */}
+            <ProfileList
+              title="Película Favorita"
+              items={member.favoriteMovies}
+            />
           </div>
         )}
       </div>
 
-      {/* Sorpresa animacion */}
-      {animPhase !== "IDLE" && (
-        <div
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            zIndex: 999999,
-            backgroundColor:
-              animPhase === "SCARE" ? "rgba(0,0,0,0.95)" : "transparent",
-            transition: "background-color 0.8s ease",
-            pointerEvents: "none",
-          }}
-        >
-          <img
-            src={member.surprise}
-            alt="Flying surprise"
-            style={{
-              position: "absolute",
-              objectFit: "contain",
-              ...(animPhase === "SCARE"
-                ? {
-                    top: 0,
-                    left: 0,
-                    width: "100vw",
-                    height: "100vh",
-                    transition: "none",
-                  }
-                : {
-                    top: targetRect?.top,
-                    left: targetRect?.left,
-                    width: targetRect?.width,
-                    height: targetRect?.height,
-                    transition: "all 0.8s cubic-bezier(0.25, 1, 0.5, 1)",
-                  }),
-            }}
-          />
-        </div>
-      )}
+      {/* sorpresa animacion */}
+      <SurpriseAnimation
+        animPhase={animPhase}
+        targetRect={targetRect}
+        surpriseImg={member.surprise}
+      />
     </main>
   );
 }
