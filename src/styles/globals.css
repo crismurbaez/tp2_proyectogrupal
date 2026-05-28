@@ -200,10 +200,19 @@ li {
   gap: 3rem;
 }
 
-.bitacora-hero {
+/* .bitacora-hero {
   padding: 2rem;
   border-radius: 24px;
   background: var(--color-bg-card);
+} */
+
+.bitacora-hero {
+  padding: 2.5rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(20,0,0,0.75), rgba(10,10,20,0.65));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(255,0,80,0.12);
 }
 
 .bitacora-section {
@@ -212,19 +221,58 @@ li {
   gap: 1.5rem;
 }
 
+.bitacora-section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+}
+
+.bitacora-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 70%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff0055, transparent);
+}
+
 .bitacora-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
 
-.bitacora-card,
+/* .bitacora-card,
 .comparison-card,
 .timeline-item {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
   padding: 1.5rem;
+} */
+
+.bitacora-card,
+.comparison-card,
+.timeline-item {
+  background: rgba(10,0,0,0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 0, 80, 0.18);
+  border-radius: 22px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+
+.bitacora-card:hover,
+.comparison-card:hover,
+.timeline-item:hover{
+  transform: translateY(-6px);
+  border-color: rgba(255,0,100,0.55);
+  box-shadow: 0 0 25px rgba(255,0,100,0.18);
 }
 
 .comparison-grid {
@@ -834,7 +882,7 @@ li {
 ========================= */
 
 .sidebar-footer {
-  margin-top: auto;
+  margin-top: 10px;
   padding-top: 2rem;
 }
 
