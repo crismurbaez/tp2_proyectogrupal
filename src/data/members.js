@@ -81,7 +81,7 @@ const members = [
 
   {
     id: "max",
-    name: "Gisse",
+    name: "Gisela",
     age: 15,
     location: " Lanoth",
 
