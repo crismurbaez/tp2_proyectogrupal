@@ -7,7 +7,7 @@ const members = [
       hawkins: {
         img: "/img/img_card_steve_profile_light.png",
 
-        role: "QA-Tester/Ciberseguridad",
+        role: "QA - Tester / Ciberseguridad",
 
         quote:
           '"Si algo puede fallar, lo voy a encontrar primero"',
