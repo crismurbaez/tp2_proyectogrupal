@@ -77,6 +77,10 @@
     border-color: #4f46e5;
 }
 
+[data-theme="hawkins"] .bitacora-section h2 {
+  color: #FFFFFF;
+}
+
 /* UPSIDE DOWN */
 [data-theme="upside-down"] .profile-page {
     background: #0f172a;
