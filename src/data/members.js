@@ -42,22 +42,31 @@ const members = [
         ]
       }
     },
-
+    
     favoriteMusic: [
-      "Megadeth",
-      "Queen",
-      "The Beattles",
-      "Michael Jackson"
+      {title: "Megadeth",
+        img: "/img/hobby/megadeth.jpg"},
+      {title: "Queen",
+        img: "/img/hobby/queen.jpg"},
+      {title: "The Beattles",
+        img: "/img/hobby/thebeatles.jpg"},
+      {title: "Michael Jackson",
+        img: "/img/hobby/michaeljackson.jpg"}
     ],
+
     favoriteMovies: [
-      "The Matrix",
-      "Interstellar",
-      "Back to the Future",
-      "The Lord of the Rings"
+      {title: "The Matrix",
+        img: "/img/hobby/matrix.jpg"},
+      {title: "Interstellar",
+        img: "/img/hobby/interstellar.jpg"},
+      {title: "Back to the Future",
+        img: "/img/hobby/backtothefuture.jpg"},
+      {title: "The Lord of the Rings",
+        img: "/img/hobby/thelordoftherings.jpg"}
     ],
     age: 18,
     location: "Silent Hill",
-    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
+
     techStack: [
       { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
       { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
@@ -124,19 +133,42 @@ const members = [
         ]
       }
     },
+
     favoriteMusic: [
-      "Kate Bush",
-      "Sabrina Carpenter",
-      "Queen",
-      "The Beattles"
+      {title: "Megadeth",
+        img: "/img/hobby/megadeth.jpg"},
+      {title: "Queen",
+        img: "/img/hobby/queen.jpg"},
+      {title: "The Beattles",
+        img: "/img/hobby/thebeatles.jpg"},
+      {title: "Michael Jackson",
+        img: "/img/hobby/michaeljackson.jpg"}
     ],
+
+    favoriteMusic: [
+      {title: "Kate Bush",
+        img: "/img/hobby/katebush.jpeg"},
+      {title: "Soda Stereo",
+        img: "/img/hobby/sodastereo.jpg"},
+      {title: "Sabrina Carpenter",
+        img: "/img/hobby/sabrinacarpenter.jpg"}, 
+      {title: "Ac/Dc",
+        img: "/img/hobby/acdc.jpg"}
+    ],
+
     favoriteMovies: [
-      "El Hobbit",
-      "F1 Movie",
-      "Star Wars",
-      "Harry Potter"
+      {title: "El Hobbit",
+        img: "/img/hobby/hobbit.jpg"},
+      {title: "F1 Movie",
+        img: "/img/hobby/f1movie.jpg"},
+      {title: "Star Wars",
+        img: "/img/hobby/starwars.jpg"},
+      {title: "Harry Potter",
+        img: "/img/hobby/hp.jpg"}
     ],
-    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
+    age: 15,
+    location: " Lanoth",
+
     techStack: [
       { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
       { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },
@@ -220,18 +252,29 @@ const members = [
       { platform: "LinkedIn", url: "https://linkedin.com/", icon: "linkedin" }
     ],
 
-  favoriteMusic: [
-    "Keane",
-    "Adele",
-    "N´SYNC",
-    "Los piojos"
-  ],
-  favoriteMovies: [
-    "Batman begins",
-    "Your name",
-    "Terminator 2",
-    "El origen"
-  ],
+    favoriteMusic: [
+      {title: "Keane",
+        img: "/img/hobby/keane.jpg"},
+      {title: "Adele",
+        img: "/img/hobby/adele.jpg"},
+      {title: "N´SYNC",
+        img: "/img/hobby/nsync.jpg"}, 
+      {title: "Los Piojos",
+        img: "/img/hobby/lospiojos.jpg"}
+    ],
+
+    favoriteMovies: [
+      {title: "Batman begins",
+        img: "/img/hobby/batman.jpg"},
+      {title: "Your name",
+        img: "/img/hobby/yourname.jpg"},
+      {title: "Terminator 2",
+        img: "/img/hobby/terminator2.jpg"},
+      {title: "El origen",
+        img: "/img/hobby/elorigen.jpg"}
+    ],
+    age: 25,
+    location: "Gotham City",
 
     surprise:
       "/img/stranger-things-demogorgon.gif"
@@ -280,21 +323,31 @@ const members = [
         ]
       }
     },
+
     favoriteMusic: [
-      "The Beatles",
-      "Deep Purple",
-      "The Rolling Stones",
-      "Aerosmith"
+      {title: "Aerosmith",
+        img: "/img/hobby/aerosmith.jpg"},
+      {title: "Elvis Presley",
+        img: "/img/hobby/elvis.jpg"},
+      {title: "The Rolling Stones",
+        img: "/img/hobby/rollingstones.jpg"},
+      {title: "Deep Purple",
+        img: "/img/hobby/deeppurple.jpg"}, 
     ],
+
     favoriteMovies: [
-      "El Señor de los Anillos",
-      "Star Wars",
-      "Harry Potter",
-      "F1 Movie"
+      {title: "El Diablo Viste a la Moda",
+        img: "/img/hobby/diablovistealamoda.jpg"},
+      {title: "Si tuviera 30",
+        img: "/img/hobby/siyotuviera30.jpg"},
+      {title: "Constantine",
+        img: "/img/hobby/constantine.jpg"},
+      {title: "Yo antes de ti",
+        img: "/img/hobby/yoantesdeti.jpg"},
     ],
+
     age: 18,
     location: "La Montaña Solitaria (Lonely Mountain)",
-    //TODO: cambiar si es necesario y agregar las imagenes en la carpeta correspondiente
     techStack: [
       { name: "JavaScript", level: 90, img: "/img/techIcons/javascript-js-logo.png" },
       { name: "Node JS", level: 85, img: "/img/techIcons/nodejs-logo.png" },

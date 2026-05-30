@@ -336,6 +336,38 @@ body.robin.dark .profile {
     box-shadow: 0 0 10px #FF0000;
 }
 
+/* Favoritos */
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 180px);
+  gap: 20px;
+  justify-content: center;
+}
+
+.favorite-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.favorite-card img:hover {
+  transform: scale(1.05);
+}
+
+.favorite-card span {
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
 /* =========================================
   Responsive
    ========================================= */
