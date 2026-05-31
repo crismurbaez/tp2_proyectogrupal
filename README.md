@@ -191,35 +191,32 @@ Breakpoints implementados:
 
 # 🧠 Uso de Inteligencia Artificial
 
-## Herramientas utilizadas
+Para agilizar el desarrollo y mejorar la calidad del código, el equipo integró activamente herramientas de Inteligencia Artificial en diversas etapas del proyecto.
 
-* ChatGPT
-* GitHub Copilot
-* OpenCode
-
----
-
-## Uso técnico
-
-Las herramientas IA fueron utilizadas como asistencia para:
-
-* debugging
-* planificación de arquitectura
-* mejoras de componentes React
-* optimización de CSS
-* resolución de errores
-* generación de ideas UI/UX
+## Herramientas Utilizadas
+* **ChatGPT:** Asistencia en lógica compleja de React, refactorización y redacción técnica.
+* **GitHub Copilot:** Autocompletado inteligente de código y sugerencias en la arquitectura.
+* **OpenCode / Generadores de Imágenes:** Generación de assets visuales y estructura.
 
 ---
 
-## Generación de contenido e imágenes
+## Ejemplos de Uso y Prompts
 
-La IA fue utilizada para:
+### 1. Generación de Assets y UI/UX
+Se utilizó Gemini (con su modelo integrado Imagen 3) en su versión gratuita para la ideación y generación del contenido visual, avatares y logos del proyecto.   
+* **Criterio de Prompt:** Se definieron instrucciones estructuradas para mantener coherencia visual en toda la SPA. Los criterios clave incluyeron:
+  1. **Estilo Artístico:** Estética retro años 80s, temática sci-fi / horror (inspirada en Stranger Things), pixel art y flat design.
+  2. **Paleta de Colores:** Uso intensivo de contrastes neón (magenta `#ff3d6b` y cian/azul) sobre fondos oscuros, respetando la guía de estilos del proyecto.
+  3. **Dualidad de Temas:** Especificaciones de iluminación para crear versiones adaptadas al "Modo Claro" (tonos más limpios y legibles) y al "Modo Oscuro / Upside Down" (atmósferas lúgubres y misteriosas).
+  4. **Propósito:** Creación de avatares consistentes para los integrantes, banners de perfil, y logotipos sin fondo (transparencias) para la correcta integración en la interfaz.
+* **Ejemplo de Prompt:** *"Generá un avatar estilo pixel art oscuro y misterioso para un perfil de desarrollador frontend, utiliza una paleta de colores azul oscuro y magenta neón."*
 
-* avatares
-* ideas visuales
-* asistencia en prompts
-* documentación técnica
+### 2. Asistencia en Lógica de React
+La IA nos ayudó a resolver problemas de estado y a optimizar nuestros algoritmos matemáticos en el explorador.
+
+### 3. Debugging y Resolución de Errores
+Identificación rápida de errores de dependencias y de renderizado en nuestro entorno local Vite.
+
 
 ---
 
