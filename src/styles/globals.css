@@ -209,8 +209,9 @@ li {
 .tree-header p,
 .api-header p,
 .explorer-header p,
-.gallery-header p {
-  color: #e5e7eb;
+.gallery-header p,
+.bitacora-hero p {
+  color: var(--color-accent);
   font-size: 1.1rem;
 }
 
@@ -253,8 +254,7 @@ li {
 }
 
 .bitacora-hero p {
-  color: rgba(255, 255, 255, .75);
-  font-size: 1.05rem;
+  /* color heredado de la regla global (var(--color-accent)) */
 }
 
 .bitacora-section {
@@ -796,7 +796,7 @@ li {
 }
 
 .explorer-header p {
-  color: var(--color-text-secondary);
+  /* color heredado globalmente */
 }
 
 .explorer-controls {
@@ -945,7 +945,7 @@ li {
 }
 
 .api-header p {
-  color: var(--color-text-secondary);
+  /* color heredado globalmente */
 }
 
 .api-grid {
@@ -1050,7 +1050,7 @@ li {
 }
 
 .tree-header p {
-  color: var(--color-text-secondary);
+  /* color heredado globalmente */
 }
 
 .tree-container {
