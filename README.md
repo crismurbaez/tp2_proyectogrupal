@@ -116,63 +116,45 @@ Librería utilizada:
 
 ---
 
-# ⚙️ Funcionalidades Principales
+# ⚙️ Funcionalidades y Componentes Clave (React)
 
 ## 🏠 Dashboard Home
-
-* Grid dinámica de integrantes
-* Navegación rápida
-* Diseño responsive
+* **Funciones Dinámicas:** Iteración de arreglos con `.map()` para generar perfiles de manera dinámica sin repetir código HTML.
+* **Componentes Clave:** `Home.jsx` y `MemberCard.jsx`.
+*(Ver capturas de pantalla al final del documento).*
 
 ---
 
 ## 👤 Perfiles Individuales
-
-* Información personal
-* Skills
-* Carrusel de proyectos
-* Render dinámico
+* **Funciones Dinámicas:** Uso de React Router (`useParams()`) para capturar el ID de la URL y renderizar datos condicionalmente. Inclusión de animaciones interactivas (hover) controladas por CSS.
+* **Componente Clave:** `MembersProfiles.jsx`.
 
 ---
 
 ## 🔍 JSON Explorer
-
-* Renderizado dinámico
-* Filtros en tiempo real
-* Buscador interactivo
+* **Funciones Dinámicas:** Gestión del estado de la UI con `useState` para actualizar filtros en tiempo real y lógica funcional en arreglos (`.filter()`, `.sort()`) para realizar búsquedas instantáneas en el JSON.
+* **Componente Clave:** `Explorer.jsx`.
+*(Ver capturas de pantalla al final del documento).*
 
 ---
 
 ## 🌎 API Explorer
-
-* Consumo de API pública
-* Loading states
-* Manejo de errores
-* Paginación dinámica
+* **Funciones Dinámicas:** Consumo asíncrono de APIs externas mediante `useEffect` y promesas (`async/await`). Implementación de múltiples estados (`useState`) para manejar la paginación dinámica, los "loading states" y el control de errores.
+* **Componente Clave:** `ApiExplorer.jsx`.
+*(Ver capturas de pantalla al final del documento).*
 
 ---
 
 ## 🖼️ Galería Interactiva
-
-* Grid responsive
-* Lightbox
-* Navegación entre imágenes
-* Cierre mediante tecla ESC
+* **Funciones Dinámicas:** Control de componentes modales (Lightbox) condicionado por `useState`. Integración de `useEffect` para adjuntar listeners globales (eventos del teclado como `ESC` para cerrar).
+* **Componentes Clave:** `Gallery.jsx` y `Lightbox.jsx`.
+*(Ver capturas de pantalla al final del documento).*
 
 ---
 
-## 🌳 Árbol de Renderizado
-
-* Visualización de arquitectura de componentes
-* Jerarquía de Layout y páginas
-
----
-
-## 📖 Bitácora
-
-* Documentación del proceso de desarrollo
-* Evolución TP1 → TP2
-* Organización del equipo
+## 🌳 Árbol de Renderizado & 📖 Bitácora
+* **Funciones Dinámicas:** Estructuración y renderizado de gráficos y documentación técnica usando JSX avanzado.
+* **Componentes Clave:** `RenderTree.jsx` y `Bitacora.jsx`.
 
 ---
 
