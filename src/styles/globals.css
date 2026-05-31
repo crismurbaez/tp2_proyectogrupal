@@ -1012,10 +1012,12 @@ li {
   display: flex;
   flex-direction: column;
   overflow-x: auto;
+  padding: 1rem;
 }
 
 .tree-header {
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .tree-header h1 {
@@ -1030,64 +1032,74 @@ li {
 .tree-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.tree-level {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
-}
-
-.tree-branch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.tree-children {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .tree-node {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-radius: 16px;
-  padding: 1rem 2rem;
-  min-width: 180px;
-  text-align: center;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  min-width: 250px;
+  text-align: left;
   transition: var(--transition-default);
   font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  border-left: 4px solid var(--color-accent);
 }
 
 .tree-node:hover {
-  transform: translateY(-5px);
+  transform: translateX(5px);
   border-color: var(--color-accent);
 }
 
 .tree-node.root {
+  border-left: 4px solid var(--color-accent-solid);
+  font-size: 1.1rem;
   background: var(--color-accent-solid);
 }
 
-.tree-node.child {
-  min-width: 160px;
-  font-size: 0.95rem;
+.tree-node.level-1 { border-left-color: #00e5ff; box-shadow: -2px 0 10px rgba(0, 229, 255, 0.2); }
+.tree-node.level-2 { border-left-color: #ff3d6b; box-shadow: -2px 0 10px rgba(255, 61, 107, 0.2); }
+.tree-node.child { border-left-color: #39ff14; font-size: 0.95rem; box-shadow: -2px 0 10px rgba(57, 255, 20, 0.2); }
+.tree-node.sub-child { border-left-color: #b026ff; font-size: 0.85rem; padding: 0.6rem 1.2rem; box-shadow: -2px 0 10px rgba(176, 38, 255, 0.2); }
+
+.tree-children {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5rem;
+  border-left: 4px solid var(--color-accent);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0); /* Evita sombra duplicada, pero preparamos por si se quiere brillar */
+  margin-left: 2rem;
 }
 
-.tree-line.vertical {
-  width: 2px;
-  height: 40px;
-  background: var(--color-border);
+.tree-branch {
+  position: relative;
 }
 
-.tree-line.vertical.small {
-  height: 20px;
+.tree-children > * {
+  position: relative;
 }
+
+.tree-children > *::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 1.2rem;
+  width: 2.5rem;
+  height: 4px;
+  background: var(--color-accent);
+  box-shadow: 0 0 5px var(--color-accent);
+}
+
+.tree-line.vertical { display: none; }
+.tree-line.vertical.small { display: none; }
 
 /* =======================================================
    MENU TOGGLE (HAMBURGER)
