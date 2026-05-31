@@ -158,7 +158,7 @@ function Bitacora() {
               <li><strong>Cristian:</strong> Arquitectura base de React, enrutamiento general, consumo de la API externa y maquetación principal del Dashboard.</li>
               <li><strong>Lorena:</strong> Desarrollo del componente de Perfiles Dinámicos, integración del carrusel, barras de progreso de tecnologías y ajustes de responsive design.</li>
               <li><strong>Gisela:</strong> Setup inicial del proyecto (Vite), maquetación inicial de la Bitácora, desarrollo de la sección Hobbies y estructuración del README.</li>
-              <li><strong>Cristina:</strong> Algoritmo de ordenamiento para el explorador JSON, estado interactivo y Zoom del Lightbox de la galería. Documentación técnica final de la Bitácora.</li>
+              <li><strong>Cristina:</strong> Algoritmo de ordenamiento para el explorador JSON, estado interactivo y Zoom del Lightbox de la galería. Documentación técnica final de la Bitácora y sus estilos.</li>
             </ul>
           </div>
         </div>
