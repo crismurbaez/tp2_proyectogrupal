@@ -29,10 +29,10 @@ Además, incorpora funcionalidades dinámicas como:
 
 | Nombre       | GitHub                     |
 | ------------ | -------------------------- |
-| Integrante 1 | https://github.com/usuario |
-| Integrante 2 | https://github.com/usuario |
-| Integrante 3 | https://github.com/usuario |
-| Integrante 4 | https://github.com/usuario |
+| **Lorena Cohene Baez** | <a href="https://github.com/LorenaCoheneBaez" target="_blank"><img src="public/img/github.png" alt="GitHub" width="60"></a> |
+| **Gisela Colmeiro (Gisse)** | <a href="https://github.com/gissestephy" target="_blank"><img src="public/img/github.png" alt="GitHub" width="60"></a> |
+| **Cristian Vivar** | <a href="https://github.com/ecvivar" target="_blank"><img src="public/img/github.png" alt="GitHub" width="60"></a> |
+| **Cristina Murguía** | <a href="https://github.com/crismurbaez" target="_blank"><img src="public/img/github.png" alt="GitHub" width="60"></a> |
 
 ---
 
