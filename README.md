@@ -69,6 +69,7 @@ src/
 │
 ├── assets/
 ├── components/
+│   ├── bitacora/
 │   ├── cards/
 │   ├── gallery/
 │   ├── layout/
@@ -153,8 +154,8 @@ Librería utilizada:
 ---
 
 ## 🌳 Árbol de Renderizado & 📖 Bitácora
-* **Funciones Dinámicas:** Estructuración y renderizado de gráficos y documentación técnica usando JSX avanzado.
-* **Componentes Clave:** `RenderTree.jsx` y `Bitacora.jsx`.
+* **Funciones Dinámicas:** Estructuración y renderizado dinámico de datos y documentación técnica modularizando la interfaz con JSX.
+* **Componentes Clave:** `RenderTree.jsx`, `Bitacora.jsx` y `BitacoraComponents.jsx`.
 
 ---
 
