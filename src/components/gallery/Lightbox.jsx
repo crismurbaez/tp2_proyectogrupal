@@ -1,4 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaXmark, FaChevronLeft, FaChevronRight, FaMagnifyingGlassPlus, FaMagnifyingGlassMinus } from "react-icons/fa6";
+
 
 function Lightbox({
   items,
@@ -7,6 +9,22 @@ function Lightbox({
   onNext,
   onPrev
 }) {
+
+  const [zoom, setZoom] = useState(1);
+
+  const handleZoomIn = (e) => {
+    e.stopPropagation();
+    setZoom((prev) => Math.min(prev + 0.5, 3));
+  };
+
+  const handleZoomOut = (e) => {
+    e.stopPropagation();
+    setZoom((prev) => Math.max(prev - 0.5, 1));
+  };
+
+  useEffect(() => {
+    setZoom(1);
+  }, [selectedIndex]);
 
   useEffect(() => {
 
@@ -47,10 +65,19 @@ function Lightbox({
       onClick={onClose}
     >
 
+      <div className="lightbox-zoom-controls">
+        <button className="lightbox-zoom-btn" onClick={handleZoomOut}>
+          <FaMagnifyingGlassMinus />
+        </button>
+        <button className="lightbox-zoom-btn" onClick={handleZoomIn}>
+          <FaMagnifyingGlassPlus />
+        </button>
+      </div>
+
       <button
         className="lightbox-close"
       >
-        ✕
+        <FaXmark />
       </button>
 
       <button
@@ -60,13 +87,14 @@ function Lightbox({
           onPrev();
         }}
       >
-        ←
+        <FaChevronLeft />
       </button>
 
       <img
         src={item.image}
         alt={item.title}
         className="lightbox-image"
+        style={{ transform: `scale(${zoom})` }}
         onClick={(e) =>
           e.stopPropagation()
         }
@@ -79,7 +107,7 @@ function Lightbox({
           onNext();
         }}
       >
-        →
+        <FaChevronRight />
       </button>
 
     </div>

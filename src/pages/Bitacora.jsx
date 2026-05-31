@@ -133,6 +133,37 @@ function Bitacora() {
         </div>
       </section>
 
+      {/* ORGANIZACIÓN Y ROLES */}
+      <section className="bitacora-section">
+        <h2>FLUJO DE TRABAJO Y ROLES</h2>
+
+        <div className="bitacora-card single-card">
+          <div className="card-content">
+            <h3>Gestión de Tareas (Jira)</h3>
+            <p>
+              Utilizamos tableros ágiles en Jira para organizar las tareas.
+              Manejamos historias de usuario y tareas asignadas, moviéndolas por los estados
+              "Por hacer", "En progreso", "En revisión" y "Listo". Esto nos permitió distribuir la carga equitativamente.
+            </p>
+
+            <h3>Control de Versiones (GitFlow)</h3>
+            <p>
+              En GitHub implementamos un flujo de trabajo basado en ramas (GitFlow).
+              Mantuvimos la rama "master" para la versión estable del proyecto, y cada integrante creó ramas individuales
+              (como las ramas "Cristian", "lorena", "cristina") para desarrollar sus componentes de forma aislada antes de fusionar el código.
+            </p>
+
+            <h3>Roles del Equipo y Contribuciones</h3>
+            <ul>
+              <li><strong>Cristian:</strong> Arquitectura base de React, enrutamiento general, consumo de la API externa y maquetación principal del Dashboard.</li>
+              <li><strong>Lorena:</strong> Desarrollo del componente de Perfiles Dinámicos, integración del carrusel, barras de progreso de tecnologías y ajustes de responsive design.</li>
+              <li><strong>Gisela:</strong> Setup inicial del proyecto (Vite), maquetación inicial de la Bitácora, desarrollo de la sección Hobbies y estructuración del README.</li>
+              <li><strong>Cristina:</strong> Algoritmo de ordenamiento para el explorador JSON, estado interactivo y Zoom del Lightbox de la galería. Documentación técnica final de la Bitácora y sus estilos.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* FUNCIONALIDADES */}
       <section className="bitacora-section">
         <h2>FUNCIONALIDADES IMPLEMENTADAS</h2>
