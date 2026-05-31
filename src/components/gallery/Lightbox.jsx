@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { FaXmark, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+
 
 function Lightbox({
   items,
@@ -50,7 +52,7 @@ function Lightbox({
       <button
         className="lightbox-close"
       >
-        ✕
+        <FaXmark />
       </button>
 
       <button
@@ -60,7 +62,7 @@ function Lightbox({
           onPrev();
         }}
       >
-        ←
+        <FaChevronLeft />
       </button>
 
       <img
@@ -79,7 +81,7 @@ function Lightbox({
           onNext();
         }}
       >
-        →
+        <FaChevronRight />
       </button>
 
     </div>
