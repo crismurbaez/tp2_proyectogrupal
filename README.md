@@ -2,7 +2,7 @@
 
 ## 🌐 Deploy del Proyecto
 
-🔗 [Ver proyecto online](https://TU-DEPLOY.vercel.app)
+🔗 [Ver proyecto online](https://tp2-proyectogrupal.vercel.app/)
 
 ---
 
@@ -72,11 +72,14 @@ src/
 │   ├── cards/
 │   ├── gallery/
 │   ├── layout/
+│   ├── profile/
+│   ├── ui/
 │
 ├── data/
 ├── pages/
 ├── routes/
 ├── styles/
+├── themes/
 │
 ├── App.jsx
 └── main.jsx
@@ -301,7 +304,7 @@ Proyecto desplegado utilizando:
 
 * Vercel
 
-🔗 https://TU-DEPLOY.vercel.app
+🔗 https://tp2-proyectogrupal.vercel.app/
 
 ---
 
