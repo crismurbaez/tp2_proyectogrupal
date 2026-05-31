@@ -399,9 +399,20 @@ li {
 .bitacora-card p,
 .comparison-card p,
 .timeline-item p,
-.comparison-card li {
+.comparison-card li,
+.bitacora-card li {
   color: rgba(255, 255, 255, .8);
   line-height: 1.6;
+}
+
+.bitacora-card ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bitacora-card li {
+  margin-bottom: 12px;
 }
 
 .timeline {
