@@ -1,4 +1,4 @@
-﻿/* =======================================================
+/* =======================================================
    RESET
 ======================================================= */
 
@@ -714,6 +714,36 @@ li {
 
 .lightbox-next {
   right: 40px;
+}
+
+/* Contenedor y botones de zoom */
+.lightbox-zoom-controls {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  display: flex;
+  gap: 15px;
+  z-index: 10000;
+}
+
+.lightbox-zoom-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lightbox-zoom-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
 }
 
 
