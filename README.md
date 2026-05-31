@@ -197,9 +197,9 @@ Breakpoints implementados:
 Para agilizar el desarrollo y mejorar la calidad del código, el equipo integró activamente herramientas de Inteligencia Artificial en diversas etapas del proyecto.
 
 ## Herramientas Utilizadas
-* **ChatGPT:** Asistencia en lógica compleja de React, refactorización y redacción técnica.
-* **GitHub Copilot:** Autocompletado inteligente de código y sugerencias en la arquitectura.
-* **OpenCode / Generadores de Imágenes:** Generación de assets visuales y estructura.
+* **Gemini (IA Conversacional):** Asistencia en lógica compleja de React, refactorización, resolución de errores (debugging) y redacción de documentación técnica.
+* **GitHub Copilot:** Autocompletado inteligente de código y sugerencias rápidas durante la maquetación.
+* **Gemini (Imagen 3):** Ideación visual y generación de todos los assets gráficos (avatares, logos y fondos).
 
 ---
 
