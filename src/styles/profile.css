@@ -50,8 +50,8 @@
     letter-spacing: 2px;
 }
 
-#profile-desc{
-font-size: 16px;
+#profile-desc {
+    font-size: 16px;
 }
 
 .profile-info {
@@ -338,34 +338,34 @@ body.robin.dark .profile {
 
 /* Favoritos */
 .favorites-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 180px);
-  gap: 20px;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    gap: 20px;
+    justify-content: center;
 }
 
 .favorite-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .favorite-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
 }
 
 .favorite-card img:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .favorite-card span {
-  margin-top: 8px;
-  font-size: 0.9rem;
+    margin-top: 8px;
+    font-size: 0.9rem;
 }
 
 /* =========================================
@@ -388,7 +388,7 @@ body.robin.dark .profile {
     }
 
     .profile-card img {
-        width: 12.5rem;
+        width: 50%;
     }
 
     .profile-info {
@@ -403,7 +403,7 @@ body.robin.dark .profile {
     }
 
     .profile-card img {
-        width: 9.375rem;
+        width: 52%;
     }
 
     .profile-info h2 {
@@ -412,5 +412,9 @@ body.robin.dark .profile {
 
     .profile-info p {
         font-size: 0.8125rem;
+    }
+
+    .favorite-card span {
+        font-size: 0.7rem;
     }
 }
