@@ -153,12 +153,12 @@ function Bitacora() {
               (como las ramas "Cristian", "lorena", "cristina") para desarrollar sus componentes de forma aislada antes de fusionar el código.
             </p>
 
-            <h3>Roles del Equipo</h3>
+            <h3>Roles del Equipo y Contribuciones</h3>
             <ul>
-              <li><strong>Cristian:</strong> QA Tester / Ciberseguridad (Pruebas de componentes, validación y detección de errores en UI).</li>
-              <li><strong>Gisela:</strong> Front-end Developer (Diseño UX/UI, maquetación del Dashboard y estilos CSS globales).</li>
-              <li><strong>Lorena:</strong> Back-end Developer (Lógica de componentes principales, enrutamiento y consumo asíncrono de la API externa).</li>
-              <li><strong>Cristina:</strong> Data Analyst (Análisis de requerimientos, estructuración y renderizado dinámico del JSON Explorer, Bitácora).</li>
+              <li><strong>Cristian:</strong> Arquitectura base de React, enrutamiento general, consumo de la API externa y maquetación principal del Dashboard.</li>
+              <li><strong>Lorena:</strong> Desarrollo del componente de Perfiles Dinámicos, integración del carrusel, barras de progreso de tecnologías y ajustes de responsive design.</li>
+              <li><strong>Gisela:</strong> Setup inicial del proyecto (Vite), maquetación inicial de la Bitácora, desarrollo de la sección Hobbies y estructuración del README.</li>
+              <li><strong>Cristina:</strong> Algoritmo de ordenamiento para el explorador JSON, estado interactivo y Zoom del Lightbox de la galería. Documentación técnica final de la Bitácora.</li>
             </ul>
           </div>
         </div>
