@@ -273,7 +273,7 @@ La transición del TP1 al TP2 representó un gran salto técnico y organizativo,
 ## Clonar repositorio
 
 ```bash
-git clone https://github.com/USUARIO/REPOSITORIO.git
+git clone https://github.com/gissestephy/tp2_proyectogrupal.git
 ```
 
 ## Instalar dependencias
