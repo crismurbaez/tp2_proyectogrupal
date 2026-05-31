@@ -159,9 +159,10 @@ Librería utilizada:
 
 ---
 
-## 🌓 Contexto Global y Theming (ThemeContext)
-* **Funciones Dinámicas:** Implementación avanzada de **Context API** (`createContext`, `useContext`) para proveer a toda la aplicación del estado del tema actual. Uso de `localStorage` para persistencia del tema (Hawkins / Upside Down) y `useEffect` para mutar variables CSS globales (`data-theme`).
+## 🌓 Modo Claro / Oscuro (Hawkins vs Upside Down)
+* **Funciones Dinámicas:** Implementación de un interruptor de tema dinámico usando **Context API** para alternar entre el mundo normal (modo claro/azulado) y el "Upside Down" (modo oscuro/rojo). Uso de `localStorage` para persistencia del tema.
 * **Componentes Clave:** `ThemeContext.jsx` y `ThemeToggle.jsx`.
+*(Ver capturas de pantalla al final del documento).*
 
 ---
 
@@ -260,6 +261,13 @@ La transición del TP1 al TP2 representó un gran salto técnico y organizativo,
 ## Galería
 
 ![Gallery](./public/screenshots/gallery.png)
+
+---
+
+## Modo Oscuro / Claro (Theming)
+
+![Hawkins Mode](./public/screenshots/hawkins-mode.png)
+![Upside Down Mode](./public/screenshots/upsidedown-mode.png)
 
 ---
 
