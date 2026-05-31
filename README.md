@@ -128,7 +128,7 @@ Librería utilizada:
 
 ## 👤 Perfiles Individuales
 * **Funciones Dinámicas:** Uso de React Router (`useParams()`) para capturar el ID de la URL y renderizar datos condicionalmente. Inclusión de animaciones interactivas (hover) controladas por CSS.
-* **Componente Clave:** `MembersProfiles.jsx`.
+* **Componentes Clave:** `MembersProfiles.jsx` y subcomponentes modulares (`ProfileList.jsx`, `ProjectsCarousel.jsx`, `TechStack.jsx`, `SocialMedia.jsx`, `SurpriseAnimation.jsx`).
 
 ---
 
@@ -148,7 +148,7 @@ Librería utilizada:
 
 ## 🖼️ Galería Interactiva
 * **Funciones Dinámicas:** Control de componentes modales (Lightbox) condicionado por `useState`. Integración de `useEffect` para adjuntar listeners globales (eventos del teclado como `ESC` para cerrar).
-* **Componentes Clave:** `Gallery.jsx` y `Lightbox.jsx`.
+* **Componentes Clave:** `Gallery.jsx`, `GalleryGrid.jsx`, `GalleryItem.jsx` y `Lightbox.jsx`.
 *(Ver capturas de pantalla al final del documento).*
 
 ---
@@ -156,6 +156,18 @@ Librería utilizada:
 ## 🌳 Árbol de Renderizado & 📖 Bitácora
 * **Funciones Dinámicas:** Estructuración y renderizado dinámico de datos y documentación técnica modularizando la interfaz con JSX.
 * **Componentes Clave:** `RenderTree.jsx`, `Bitacora.jsx` y `BitacoraComponents.jsx`.
+
+---
+
+## 🌓 Contexto Global y Theming (ThemeContext)
+* **Funciones Dinámicas:** Implementación avanzada de **Context API** (`createContext`, `useContext`) para proveer a toda la aplicación del estado del tema actual. Uso de `localStorage` para persistencia del tema (Hawkins / Upside Down) y `useEffect` para mutar variables CSS globales (`data-theme`).
+* **Componentes Clave:** `ThemeContext.jsx` y `ThemeToggle.jsx`.
+
+---
+
+## 🗄️ Modularización de Datos (Local JSON)
+* **Estructura:** Separación absoluta de la lógica visual y los datos puros. Toda la información estática requerida por los componentes se inyecta desde archivos modulares independientes.
+* **Archivos Clave:** `members.js`, `bitacoraData.js`, `explorerData.js` y `galleryData.js`.
 
 ---
 
