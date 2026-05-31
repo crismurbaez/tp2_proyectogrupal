@@ -225,21 +225,17 @@ La IA fue utilizada para:
 
 # 🔄 Evolución del Proyecto
 
-## TP1
+La transición del TP1 al TP2 representó un gran salto técnico y organizativo, pasando de un sitio web tradicional a una **Single Page Application (SPA)** moderna y escalable.
 
-* HTML
-* CSS
-* JavaScript Vanilla
-* Navegación estática
+### 📉 Trabajo Práctico 1 (El Pasado)
+* **Tecnologías Base:** HTML5, CSS3, JavaScript Vanilla.
+* **Arquitectura:** Múltiples archivos `.html` independientes con navegación tradicional (recargas de página).
+* **Desafíos:** Código repetitivo en múltiples vistas (menús, pies de página) y manipulación manual y tediosa del DOM.
 
-## TP2
-
-* React
-* Componentización
-* React Router
-* Dashboard SPA
-* Renderizado dinámico
-* Integración de APIs
+### 📈 Trabajo Práctico 2 (El Presente)
+* **Tecnologías Base:** React, Vite, React Router DOM.
+* **Arquitectura:** Desarrollo basado en **componentización**. La interfaz se dividió en piezas reutilizables (Sidebar, Lightbox, Cards) con un único `index.html` y navegación SPA sin recargas.
+* **Nuevos Logros:** Renderizado dinámico de datos locales (JSON), consumo asíncrono de APIs externas con manejo de errores y estados de carga, y lógica avanzada.
 
 ---
 
