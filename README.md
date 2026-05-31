@@ -217,6 +217,9 @@ La IA nos ayudó a resolver problemas de estado y a optimizar nuestros algoritmo
 ### 3. Debugging y Resolución de Errores
 Identificación rápida de errores de dependencias y de renderizado en nuestro entorno local Vite.
 
+### 4. Documentación Técnica
+Se utilizó IA conversacional (como Gemini/ChatGPT) para estructurar y redactar secciones técnicas de alta complejidad.
+
 
 ---
 
