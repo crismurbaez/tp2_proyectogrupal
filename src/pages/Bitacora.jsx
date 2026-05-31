@@ -133,6 +133,37 @@ function Bitacora() {
         </div>
       </section>
 
+      {/* ORGANIZACIÓN Y ROLES */}
+      <section className="bitacora-section">
+        <h2>FLUJO DE TRABAJO Y ROLES</h2>
+
+        <div className="bitacora-card single-card">
+          <div className="card-content">
+            <h3>Gestión de Tareas (Jira)</h3>
+            <p>
+              Utilizamos tableros ágiles en Jira para organizar las tareas.
+              Manejamos historias de usuario y tareas asignadas, moviéndolas por los estados
+              "Por hacer", "En progreso", "En revisión" y "Listo". Esto nos permitió distribuir la carga equitativamente.
+            </p>
+
+            <h3>Control de Versiones (GitFlow)</h3>
+            <p>
+              En GitHub implementamos un flujo de trabajo basado en ramas (GitFlow).
+              Mantuvimos la rama "master" para la versión estable del proyecto, y cada integrante creó ramas individuales
+              (como las ramas "Cristian", "lorena", "cristina") para desarrollar sus componentes de forma aislada antes de fusionar el código.
+            </p>
+
+            <h3>Roles del Equipo</h3>
+            <ul>
+              <li><strong>Cristian:</strong> QA Tester / Ciberseguridad (Pruebas de componentes, validación y detección de errores en UI).</li>
+              <li><strong>Gisela:</strong> Front-end Developer (Diseño UX/UI, maquetación del Dashboard y estilos CSS globales).</li>
+              <li><strong>Lorena:</strong> Back-end Developer (Lógica de componentes principales, enrutamiento y consumo asíncrono de la API externa).</li>
+              <li><strong>Cristina:</strong> Data Analyst (Análisis de requerimientos, estructuración y renderizado dinámico del JSON Explorer, Bitácora).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* FUNCIONALIDADES */}
       <section className="bitacora-section">
         <h2>FUNCIONALIDADES IMPLEMENTADAS</h2>
