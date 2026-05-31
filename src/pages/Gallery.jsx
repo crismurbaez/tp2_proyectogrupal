@@ -40,9 +40,10 @@ function Gallery() {
 
     <section className="gallery-page">
 
-      <h1>
-        Galería
-      </h1>
+      <div className="gallery-header">
+        <h1>Galería</h1>
+        <p>Explora nuestras imágenes destacadas</p>
+      </div>
 
       <GalleryGrid
         items={galleryData}
