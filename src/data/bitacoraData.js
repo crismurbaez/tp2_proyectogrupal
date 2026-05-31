@@ -61,22 +61,22 @@ const roles = [
     {
         name: "Cristian",
         description:
-            "Arquitectura base de React, enrutamiento general, consumo de la API externa y maquetación principal del Dashboard.",
+            "Diseño de la arquitectura base de React SPA y configuración del enrutamiento general (React Router). Implementación asíncrona para el consumo de la API externa (GitHub), y maquetación principal del Dashboard Home.",
     },
     {
         name: "Lorena",
         description:
-            "Desarrollo del componente de Perfiles Dinámicos, integración del carrusel, barras de progreso de tecnologías y ajustes de responsive design.",
+            "Desarrollo completo del componente de Perfiles Dinámicos. Integración del carrusel interactivo, barras de progreso visuales para tecnologías, ajustes de diseño responsive y modularización técnica de los componentes de la Bitácora.",
     },
     {
         name: "Gisela",
         description:
-            "Setup inicial del proyecto (Vite), maquetación inicial de la Bitácora, desarrollo de la sección Hobbies y estructuración del README.",
+            "Setup inicial del entorno de desarrollo con Vite. Maquetación base de la sección Bitácora, desarrollo completo de la sección de Hobbies, estructuración inicial del documento README y limpieza general del repositorio.",
     },
     {
         name: "Cristina",
         description:
-            "Algoritmo de ordenamiento para el explorador JSON, estado interactivo y Zoom del Lightbox de la galería. Documentación técnica final de la Bitácora y sus estilos.",
+            "Lógica avanzada en React para el Explorador JSON y control de estado del Lightbox de la Galería. Diseño del Árbol de Renderizado Jerárquico, Theming Global (Context API) y redacción exhaustiva del README.",
     },
 ];
 
